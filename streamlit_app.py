@@ -587,11 +587,6 @@ with res_right:
             for imp in latest.get("improvements", []):
                 st.write(f"- {imp}")
 
-            with st.expander("View the scoring prompt (technical)"):
-                st.code(build_prompt(
-                    latest.get("_script", ""), latest.get("category", category),
-                    latest.get("duration", duration), latest.get("post_hour", post_hour),
-                ))
 
             if len(st.session_state.obj3_history) > 1:
                 st.divider()
